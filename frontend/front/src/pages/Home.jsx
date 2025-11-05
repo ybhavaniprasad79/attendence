@@ -15,7 +15,7 @@ const Home = () => {
             const qrboxSize = Math.min(screenWidth * 0.7, 250); // 70% of screen width up to 250px
 
             const scanner = new Html5QrcodeScanner('reader', {
-                qrbox: {
+                qrbox: { 
                     width: qrboxSize,
                     height: qrboxSize,
                 },
