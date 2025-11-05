@@ -12,7 +12,7 @@ const ParticipantList = () => {
 
     const fetchParticipants = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/api/participants');
+            const response = await axios.get('https://attendence-brl3.onrender.com/api/participants');
             setParticipants(response.data);
         } catch (error) {
             console.error('Error fetching participants:', error);
@@ -22,7 +22,7 @@ const ParticipantList = () => {
     const toggleAttendance = async (registernumber, currentStatus) => {
         try {
             const response = await axios.put(
-                `http://localhost:3000/api/participants/update/${registernumber}`,
+                `https://attendence-brl3.onrender.com/api/participants/update/${registernumber}`,
                 { present: !currentStatus }
             );
             if (response.data) {

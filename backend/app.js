@@ -5,7 +5,7 @@ const { partRoute } = require('./controllers/partRoute')
 
 app.use(express.json())
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://atrr.netlify.app/",
   credentials:true,
 }))
 

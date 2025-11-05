@@ -41,12 +41,12 @@ const Home = () => {
         
         try {
             // First, check if the participant exists
-            const checkResponse = await axios.get(`http://localhost:3000/api/participants/${registernumber}`);
+            const checkResponse = await axios.get(`https://attendence-brl3.onrender.com/api/participants/${registernumber}`);
             
             if (checkResponse.data) {
                 // Update the present status
                 const updateResponse = await axios.put(
-                    `http://localhost:3000/api/participants/update/${registernumber}`,
+                    `https://attendence-brl3.onrender.com/api/participants/update/${registernumber}`,
                     { present: true }
                 );
                 
